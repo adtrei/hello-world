@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test:connection": "node scripts/test-connection.js"
+    "test:connection": "node scripts/test-connection.js",
+    "test:e2e": "cross-env MOCK_UKG=true node scripts/run-e2e.js",
+    "test:e2e:live": "node scripts/run-e2e.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
@@ -15,6 +17,8 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nock": "^13.5.4",
     "nodemon": "^3.1.0"
   }
 }
