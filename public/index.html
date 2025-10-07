@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UKG New Hire Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>UKG New Hire Submission</h1>
+      <p>
+        Enter the new hire details below. The form submits to the
+        <code>https://rental4.ultipro.com</code> API using the supplied UKG
+        credentials.
+      </p>
+
+      <form id="hire-form" novalidate>
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label>
+            Employee ID
+            <input type="text" name="employeeId" />
+          </label>
+          <label>
+            First Name
+            <input type="text" name="firstName" required />
+          </label>
+          <label>
+            Last Name
+            <input type="text" name="lastName" required />
+          </label>
+          <label>
+            Preferred Name
+            <input type="text" name="preferredName" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Position Details</legend>
+          <label>
+            Job Title
+            <input type="text" name="jobTitle" required />
+          </label>
+          <label>
+            Department
+            <input type="text" name="department" />
+          </label>
+          <label>
+            Location
+            <input type="text" name="location" />
+          </label>
+          <label>
+            Start Date
+            <input type="date" name="startDate" required />
+          </label>
+        </fieldset>
+
+        <button type="submit">Submit Hire</button>
+      </form>
+
+      <section id="result" aria-live="polite"></section>
+    </main>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
